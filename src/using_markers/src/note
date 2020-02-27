@@ -1,0 +1,5 @@
+
+# run this to add a fixed frame for rviz
+rosrun tf static_transform_publisher 0 0 0 0 0 0 1 map my_frame 10
+
+# use markerarray to pass array of markers of any shape to rviz
