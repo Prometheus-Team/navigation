@@ -80,15 +80,6 @@ class Search:
     def euclideanDist(self, s, e):
         return math.sqrt((e[0]-s[0])**2 + (e[1]-s[1])**2 +(e[2]-s[2])**2)
 
-    # def search(self, start, end):
-    #     reached = False
-    #     cur = start
-
-    #     while not reached:
-    #         self.explored.add(cur)
-    #         nodes = self.getNextNodes(cur)
-    #         cur = self.aStar(start, end, nodes)
-
     def pathToExpand(self, strategy, frontier, start, end):
         if strategy == self.A_STAR_STRGY:
             return self.aStar(start, end, frontier)
@@ -143,11 +134,11 @@ class Search:
             finalEdge = self.edgesIndex[self.parentPaths[indFinalEdge]]
         return path
 
-srch = Search()
-strt = (2,3,5)
-x = srch.ngraphSearch(strt,(6,8,9),srch.A_STAR_STRGY)
-path = srch.getPathToFollow(strt, x)
-path.reverse()
-print(path)
+# srch = Search()
+# strt = (2,3,5)
+# x = srch.ngraphSearch(strt,(6,8,9),srch.A_STAR_STRGY)
+# path = srch.getPathToFollow(strt, x)
+# path.reverse()
+# print(path)
 
 # srch.search()
