@@ -1,0 +1,4 @@
+build/*
+devel/*
+src/using_markers/src/DenseDepth/*
+*.pyc
