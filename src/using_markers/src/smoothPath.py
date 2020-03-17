@@ -46,12 +46,14 @@ class PathSmoother:
 srch = Search()
 strt = (2,3,5)
 x = srch.ngraphSearch(strt,(6,8,9),srch.A_STAR_STRGY)
-path = srch.getPathToFollow(strt, x)
-path.reverse()
-print(path)
+if x:
+    path = srch.getPathToFollow(strt, x)
+    path.reverse()
+    print(path)
+else:
+    print("No path found")
+# p = [(2, 3, 5), (3, 4, 6), (4, 5, 7), (4, 6, 7), (5, 7, 8), (6, 8, 9)]
+# sm = PathSmoother()
 
-
-sm = PathSmoother()
-
-# print("Final path:",sm.smooth([(1,2,3),(1,2,4),(2,2,4)], 0.5, 0.1, 0.1))
-print("Final path:",sm.smooth(path, 0.5, 0.1, 0.5))
+# # print("Final path:",sm.smooth([(1,2,3),(1,2,4),(2,2,4)], 0.5, 0.1, 0.1))
+# print("Final path:",sm.smooth(p, 0.5, 0.1, 0.5))

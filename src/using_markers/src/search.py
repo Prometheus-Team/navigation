@@ -102,7 +102,7 @@ class Search:
 
         while True:
             if not frontier:
-                return False
+                return None
 
             pathToExpand = self.pathToExpand(self.A_STAR_STRGY, frontier, start, end)
             nodeToExpand = pathToExpand[1]
